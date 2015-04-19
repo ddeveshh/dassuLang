@@ -37,7 +37,32 @@
 	1. "read <identifier>;" read the input (only integer data type is supported).
 	2. "echo <expression>;" prints the value of expression to console (0 or 1 for boolean data type).
 
-###### Sample Code is present in "input" file in the repository.
+## Sample Code
+	```
+	int increment(int a):
+	return a++;
+	end
+
+	int main():
+		bool c;
+		int a = 0;
+		c = true;
+		loop c == true:
+			if a<10:
+				echo a;
+				a = increment(a);
+			elseif a==10:
+				echo a*2;
+				a = a*2;
+			else:
+				a = increment(a);
+				echo a;
+				c = NOT c;	
+			end 
+		end 
+		return 0;
+	end
+	```
 
 
 ## How to run the Code.
