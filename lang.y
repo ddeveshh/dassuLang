@@ -152,7 +152,7 @@ INIT_DEC_LIST
 	;
 
 INIT_DEC
-	: DECLARATOR							{vector<node*> b;b.push_back($1);$$=mknode(b,"INIT_DEC", "??");prms.push_back($1->type);$$->id=$1->id;}
+	: DECLARATOR							{vector<node*> b;b.push_back($1);$$=mknode(b,"INIT_DEC", "??");/*prms.push_back($1->type);*/$$->id=$1->id;}
 	| DECLARATOR OP_ASSIGN INIT					{vector<node*> b;b.push_back($1);b.push_back($2);b.push_back($3);$$=mknode(b,"INIT_DEC", "??");$$->id.push_back($1->id[0]);}
 	;
 
@@ -468,7 +468,7 @@ EXP_POSTFIX
 	| EXP_POSTFIX '(' ')'						{vector<node*> b;b.push_back($1);b.push_back(mkleaf("("));b.push_back(mkleaf(")"));$$=mknode(b,"EXP_POSTFIX", "??");$$->type=$1->type;cout<<$1->token<<endl; current_func = $1->id[0];}
 	| EXP_POSTFIX '(' ARG_EXP_LIST ')'				{vector<node*> b;b.push_back($1);b.push_back(mkleaf("("));b.push_back($3);b.push_back(mkleaf(")"));$$=mknode(b,"EXP_POSTFIX", "??");$$->type=$1->type;current_func = $1->id[0];
 										if(funcTable[$1->id[0]].size() == prms.size()){
-											for(int i=0;i<prms.size();i++){
+											for(int i=0;i<funcTable[$1->id[0]].size();i++){
 												if(funcTable[$1->id[0]][i].first != prms[i]){
 													cout << "Line No.:" << line_no << ":::Expected type '" <<funcTable[$1->id[0]][i].first << "' for argument "<< i+1 << " in function '" << $1->id[0] << "' but provided '" << prms[i] << "'." << endl; 
 												}

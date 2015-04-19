@@ -4,7 +4,7 @@ end
 
 int main():
 	bool c;
-	int a = 0;
+	int d,b,a = 0;
 	c = true;
 	loop c == true:
 		if a<10:
@@ -13,9 +13,10 @@ int main():
 		elseif a==10:
 			echo a*2;
 			a = a*2;
+			break;
 		else:
-			a = increment(a);
 			echo a;
+			a = increment(a);
 			c = NOT c;	
 		end 
 	end 

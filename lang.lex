@@ -16,15 +16,15 @@ void inc_line();
 %%
 "echo"									{ /*cout << yytext << endl;*/ return(WRITE);}
 "read"									{ /*cout << yytext << endl;*/ return(READ);}
-"varn"									{ /*cout << yytext << endl;*/ return(CHAR);}
+"char"									{ /*cout << yytext << endl;*/ return(CHAR);}
 "bool"									{ /*cout << yytext << endl;*/ return(BOOL);}
 "else"									{ /*cout << yytext << endl;*/ return(ELSE);}
 "if"									{ /*cout << yytext << endl;*/ return(IF);}
 "end"									{ /*cout << yytext << endl;*/ return(END);}
 "elseif"								{ /*cout << yytext << endl;*/ return(ELSEIF);}
 "external"								{ /*cout << yytext << endl;*/ return(EXTERNAL);}
-"purnank"								{ /*cout << yytext << endl;*/ return(INT);}
-"dashamlav"								{ /*cout << yytext << endl;*/ return(FLOAT);}
+"int"								{ /*cout << yytext << endl;*/ return(INT);}
+"float"								{ /*cout << yytext << endl;*/ return(FLOAT);}
 "loop"									{ /*cout << yytext << endl;*/ return(LOOP);}
 "break"									{ /*cout << yytext << endl;*/ return(BREAK);}
 "continue"								{ /*cout << yytext << endl;*/ return(CONTINUE);}
