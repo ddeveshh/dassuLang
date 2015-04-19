@@ -40,7 +40,7 @@
 ## Sample Code
 	```
 	int increment(int a):
-	return a++;
+		return a++;
 	end
 
 	int main():
