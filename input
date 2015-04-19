@@ -1,0 +1,10 @@
+
+purnank main():
+	bool b = true,c;
+	echo b;
+	c = NOT b;
+	if c!=b:
+		echo 12;
+	end
+	echo b;     
+end
