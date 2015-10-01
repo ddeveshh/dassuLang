@@ -9,7 +9,7 @@
 	This is language is made as a Compilers Lab Project at Indian Institute of Technology Guwahati by the team members mentioned above. This language is a Subset of C. Syntax somewhat resembles Python. The supported are "integer" and "bool". It supports global declarations, recursive function calls, unary operators like negation, logical NOT, logical OR, logical AND, bitwise NOT ("~") and binary operators like addition, subtaction, division, multiplication, modulus, biwise and("&"), bitwise or("|"), bitwise xor("^") and various comparators like greaterthan equal to (">="), less than equal to ("<="), equal to ("==") and not equal to ("!="). There is only one kind of loop that is similar to "while" loop in C, if else statement is also similar to C. All the global variables are initialized to 0.
 
 ### Syntax
-	Syntax of the language is quite similar to python and C. Every statement ends with a semicolon (";") as in C.
+	Syntax of the language is quite similar to both python and C. Every statement ends with a semicolon (";") as in C.
 
 #### Functions
 	1. Every function start with a type specifier("int" or "bool") just like C.
