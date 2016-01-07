@@ -33,7 +33,7 @@
 #### jump statements
 	jump statements are similar to C. It supports "break" and "return" statements only.
 
-#### read and print statements
+#### read and write(print) statements
 	1. "read <identifier>;" read the input (only integer data type is supported).
 	2. "echo <expression>;" prints the value of expression to console (0 or 1 for boolean data type).
 
